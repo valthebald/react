@@ -2,3 +2,4 @@ name = React
 description = React JavaScript library. Integration module.
 core = 7.x
 configure = admin/config/development/react
+dependencies[] = libraries (>=2.0)
