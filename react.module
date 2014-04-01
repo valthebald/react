@@ -6,7 +6,7 @@
  */
 
 define('REACT_VENDOR_URL', 'http://facebook.github.io/react/');
-define('REACT_DOWNLOAD_URL', 'http://facebook.github.io/react/downloads/react-0.8.0.zip');
+define('REACT_DOWNLOAD_URL', 'http://facebook.github.io/react/downloads/react-0.10.0.zip');
 
 /**
  * Implements hook_libraries_info().
@@ -27,7 +27,7 @@ function react_libraries_info() {
     'download url' => REACT_DOWNLOAD_URL,
     'path' => 'build',
     // The version is in the line 2 of the file. It looks like this currently:
-    // * React v0.8.0
+    // * React v0.10.0
     'version arguments' => array(
       'file' => 'build/react.min.js',
       'pattern' => '@React v([\d\.]+)@',
