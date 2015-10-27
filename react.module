@@ -3,6 +3,11 @@
 /**
  * @file
  * Drupal module for React library integration
+ *
+ * Usage of the library:
+ *   libraries_load('react');  will load the minified react.min.js and react-dom.min.js
+ *   libraries_load('react', 'source');  will load the un-minified variant.
+ *
  */
 
 define('REACT_VENDOR_URL', 'https://facebook.github.io/react/');
@@ -28,18 +33,18 @@ function react_libraries_info() {
       'lines' => 3,
       'cols' => 30,
     ),
-    'files' => array(
+    'files' => array(  // By default, load the minified version
       'js' => array(
-        'react.js',
-        'react-dom.js',
+        'react.min.js',
+        'react-dom.min.js',
       ),
     ),
     'variants' => array(
-      'minified' => array(
+      'source' => array(
         'files' => array(
           'js' => array(
-            'react.min.js',
-            'react-dom.min.js',
+            'react.js',
+            'react-dom.js',
           ),
         ),
       ),
@@ -48,8 +53,8 @@ function react_libraries_info() {
 
   // Replace react.js  with react-with-addons.js (if the admin setting has been enabled)
   if (variable_get('react_with_addons', FALSE)) {
-    $libraries['react']['files']['js'][0] = 'react-with-addons.js';
-    $libraries['react']['variants']['minified']['files']['js'][0] = 'react-with-addons.min.js';
+    $libraries['react']['files']['js'][0] = 'react-with-addons.min.js';
+    $libraries['react']['variants']['source']['files']['js'][0] = 'react-with-addons.js';
   }
 
   return $libraries;
