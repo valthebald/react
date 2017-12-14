@@ -30,7 +30,7 @@
     }
   ],
   "require": {
-    "drupal-libraries/reactjs": "16.2.0"
+    "drupal-libraries/reactjs": "*"
   }
 }
 
