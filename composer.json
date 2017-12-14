@@ -20,15 +20,17 @@
         "source": {
           "url": "https://github.com/facebook/react.git",
           "type": "git",
-          "reference": "16/2.0"
+          "reference": "16.2.0"
         },
         "dist": {
           "url": "https://github.com/facebook/react/releases/download/v16.2.0/react-16.2.0.zip",
           "type": "zip"
         }
-      }    }
+      }
+    }
   ],
   "require": {
     "drupal-libraries/reactjs": "16.2.0"
   }
 }
+
