@@ -1,0 +1,7 @@
+react.admin_settings:
+  path: '/admin/config/development/react'
+  defaults:
+    _title: 'React Library'
+    _form: '\Drupal\react\Form\ReactAdminSettings'
+  requirements:
+    _permission: 'administer react library'

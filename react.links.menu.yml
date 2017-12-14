@@ -1,0 +1,5 @@
+react.settings:
+  title: React Library
+  description: Configuration for React Library
+  route_name: react.admin_settings
+  expanded: TRUE

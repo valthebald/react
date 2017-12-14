@@ -1,18 +1,21 @@
 <?php
 
 /**
- * Delete variable 'react_with_jsxtransformer' available in react 7.x-1.x, as it has been deprecated, and not included
- * in React 0.14 and after.
+ * @file
+ * Install, update, etc. hooks.
  */
-function react_update_7200() {
-  variable_del('react_with_jsxtransformer');
-}
 
+/**
+ * Implements hook_install().
+ */
+function react_install() {
+  drupal_set_message(t('React Library module has been enabled successfully.'), 'status');
+}
 
 /**
  * Implements hook_uninstall().
  */
 function react_uninstall() {
-  variable_del('react_with_addons');
-  variable_del('react_with_jsxtransformer');
+  Drupal::configFactory()->getEditable('react.settings')->clear('react_addons')->save();
+  drupal_set_message(t('Taxonomy manager module has been uninstalled successfully.'), 'status');
 }

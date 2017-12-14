@@ -1,5 +1,0 @@
-name = React Library
-description = React JavaScript library. Integration module with react 0.14 and later
-core = 7.x
-configure = admin/config/development/react
-dependencies[] = libraries (>=2.0)

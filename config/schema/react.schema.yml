@@ -1,0 +1,6 @@
+react.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    react_addons:
+      type: String

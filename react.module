@@ -60,21 +60,3 @@ function react_libraries_info() {
   return $libraries;
 }
 
-/**
- * Implements hook_menu().
- *
- * @see hook_menu()
- */
-function react_menu() {
-
-  $items['admin/config/development/react'] = array(
-    'title' => 'React Library',
-    'description' => 'Configuration for React Library',
-    'access arguments' => array('administer site configuration'),
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('react_admin_settings'),
-    'file' => 'react.admin.inc',
-  );
-
-  return $items;
-}

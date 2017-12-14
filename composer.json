@@ -1,0 +1,41 @@
+{
+  "name": "drupal/react",
+  "type": "drupal-module",
+  "description": "Exposes React.js as a Drupal library.",
+  "keywords": ["Drupal", "React.js", "JavaScript"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/react",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/react",
+    "source": "https://www.drupal.org/project/react"
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "version": "16.2.0",
+        "name": "drupal-libraries/reactjs",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/facebook/react.git",
+          "type": "git",
+          "reference": "16/2.0"
+        },
+        "dist": {
+          "url": "https://github.com/facebook/react/releases/download/v16.2.0/react-16.2.0.zip",
+          "type": "zip"
+        }
+      }    }
+  ],
+  "require": {
+    "tuupola/jquery_lazyload": "1.9.7"
+  },
+  "extra": {
+    "installer-paths": {
+      "docroot/libraries/{$name}": [
+        "type:drupal-library"
+      ]
+    }
+  }
+}
