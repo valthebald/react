@@ -29,13 +29,6 @@
       }    }
   ],
   "require": {
-    "tuupola/jquery_lazyload": "1.9.7"
-  },
-  "extra": {
-    "installer-paths": {
-      "docroot/libraries/{$name}": [
-        "type:drupal-library"
-      ]
-    }
+    "drupal-libraries/reactjs": "16.2.0"
   }
 }
